@@ -24,13 +24,14 @@ header {
 /* Main image styling */
 .main-image {
     flex: 1;
-    max-width: 40%;
+    max-width: 60%;
 }
 
 .main-image img {
     width: 50%;
     height: auto;
     display: block;
+    margin: auto;
 }
 
 /* Navigation menu styling */
@@ -58,6 +59,11 @@ header {
 
 .main-nav a:hover {
     color: #0066cc;
+}
+
+/*Footer*/
+footer {
+    text-align: center;
 }
 
 /* Responsive adjustments */
