@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add as many images as you want
     ];
     
-    const rotationInterval = 5000; // Time between rotations in milliseconds (5 seconds)
+    const rotationInterval = 3000; // Time between rotations in milliseconds (5 seconds)
     let currentImageIndex = 0;
     let rotationTimer;
     

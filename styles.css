@@ -38,13 +38,15 @@ header {
 
 /* Gallery container */
 .gallery-container {
+    flex: 1;
+    max-width: 33%;
     position: relative;
-    width: 100%;
     overflow: hidden;
+    justify-content: center;
 }
 
 #gallery-image {
-    width: 100%;
+    width: 40%;
     height: auto;
     display: block;
     transition: opacity 0.5s ease-in-out;
@@ -73,7 +75,7 @@ header {
     background-color: white;
 }
 
-/* Navigation buttons */
+/* Navigation buttons for the pictures*/
 .gallery-btn {
     position: absolute;
     top: 50%;
