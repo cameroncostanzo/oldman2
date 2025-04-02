@@ -5,8 +5,7 @@ body {
 /* Old man picture */
 img {
     display: inline-block;
-    max-width: 10%;
+    max-width: 25%;
     max-height: auto;
 }
 
-/* Link menu */
