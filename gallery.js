@@ -28,6 +28,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500); // Half of the transition time
     }
     
+    // Preload pictures to avoid flickering
+    function preloadImages() {
+        galleryImages.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+    }
     // Start auto-rotation
     setInterval(updateGallery, rotationInterval);
 });
