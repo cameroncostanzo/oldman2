@@ -28,7 +28,7 @@ header {
 }
 
 .main-image img {
-    width: 100%;
+    width: 50%;
     height: auto;
     display: block;
 }
@@ -48,7 +48,7 @@ header {
 }
 
 .main-nav a {
-    font-size: 24px;
+    font-size: 30px;
     color: #333;
     text-decoration: none;
     transition: color 0.3s ease;
