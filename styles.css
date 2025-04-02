@@ -1,5 +1,7 @@
 body {
     background-color: white;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 /* Header with name*/
@@ -43,7 +45,6 @@ header {
     height: auto;
     max-height: 600px;
     object-fit: contain;
-    margin: auto;
 }
 
 /* Gallery container */
