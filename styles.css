@@ -5,6 +5,8 @@ body {
 /* Header with name*/
 header {
     margin-bottom: 40px;
+    margin-left: 40px;
+    width: 600px;
 }
 
 .name {
