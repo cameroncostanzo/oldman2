@@ -2,8 +2,11 @@ body {
     background-color: white;
 }
 
+/* Old man picture */
 img {
     display: inline-block;
     max-width: 10%;
     max-height: auto;
 }
+
+/* Link menu */
