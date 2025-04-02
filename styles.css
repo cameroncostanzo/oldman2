@@ -1,9 +1,9 @@
 body {
-    background-color: bisque;
+    background-color: white;
 }
 
 img {
     display: block;
-    max-width: 25%;
+    max-width: 10%;
     max-height: auto;
 }
