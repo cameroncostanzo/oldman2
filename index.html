@@ -16,13 +16,15 @@
 
         <main class="main-content">
             <!--first trifold: picture of me-->
-            <div class="main-image">
-                <img src="me.jpg" alt="picture of me">
+            <div class="profile-section">
+                <img src="me.jpg" alt="picture of me" class="profile image">
             </div>
 
-            <!--second trifold: rotating picture gallery-->
-            <div class="gallery-container">
-                <img id="gallery-image" src="image1.jpg" alt="Gallery Image">
+            <!--second trifold: Auto-rotating picture gallery-->
+            <div class="gallery-section">
+                <div class="gallery-container">
+                    <img id="gallery-image" src="image1.jpg" alt="Gallery Image">
+                </div>
             </div>
 
             <!--third trifold: navigation menu-->
@@ -37,8 +39,11 @@
                 </ul>
             </nav>
         </main>
+
         <footer>
             <p>Site designed and programmed by Cameron Costanzo</p>
         </footer>
+
+        <script src="gallery.js"></script>
     </body>
 </html>

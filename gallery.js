@@ -7,80 +7,27 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add as many images as you want
     ];
     
-    const rotationInterval = 3000; // Time between rotations in milliseconds (5 seconds)
+    const rotationInterval = 4000; // Time between rotations in milliseconds (4 seconds)
     let currentImageIndex = 0;
-    let rotationTimer;
-    
-    // Elements
     const galleryImage = document.getElementById('gallery-image');
-    const galleryDots = document.querySelector('.gallery-dots');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
     
-    // Create dots for each image
-    galleryImages.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if (index === 0) dot.classList.add('active');
-        
-        dot.addEventListener('click', () => {
-            currentImageIndex = index;
-            updateGallery();
-            resetRotationTimer();
-        });
-        
-        galleryDots.appendChild(dot);
-    });
-    
-    // Navigation button event listeners
-    prevBtn.addEventListener('click', () => {
-        currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
-        updateGallery();
-        resetRotationTimer();
-    });
-    
-    nextBtn.addEventListener('click', () => {
-        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-        updateGallery();
-        resetRotationTimer();
-    });
-    
-    // Function to update the gallery image and active dot
+    // Function to update the gallery image
     function updateGallery() {
-        // Fade out effect (optional)
+        // Fade out
         galleryImage.style.opacity = 0;
         
         setTimeout(() => {
+            // Change image source
             galleryImage.src = galleryImages[currentImageIndex];
             
-            // Update active dot
-            document.querySelectorAll('.dot').forEach((dot, index) => {
-                if (index === currentImageIndex) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
-            });
-            
-            // Fade in effect
+            // Fade in
             galleryImage.style.opacity = 1;
-        }, 300); // This timing should be half of your CSS transition time
-    }
-    
-    // Auto-rotation function
-    function startRotationTimer() {
-        rotationTimer = setInterval(() => {
+            
+            // Move to next image for next time
             currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-            updateGallery();
-        }, rotationInterval);
-    }
-    
-    // Reset timer when user interacts with gallery
-    function resetRotationTimer() {
-        clearInterval(rotationTimer);
-        startRotationTimer();
+        }, 500); // Half of the transition time
     }
     
     // Start auto-rotation
-    startRotationTimer();
+    setInterval(updateGallery, rotationInterval);
 });
