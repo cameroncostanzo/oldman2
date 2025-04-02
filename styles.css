@@ -2,10 +2,76 @@ body {
     background-color: white;
 }
 
-/* Old man picture */
-img {
-    display: inline-block;
-    max-width: 25%;
-    max-height: auto;
+/* Header with name
+header {
+    margin-bottom: 40px;
 }
 
+.name {
+    font-size: 36px;
+    font-weight: bold;
+}
+*/
+
+/* Main content layout */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* Main image styling */
+.main-image {
+    flex: 1;
+    max-width: 60%;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Navigation menu styling */
+.main-nav {
+    flex: 1;
+    max-width: 40%;
+}
+
+.main-nav ul {
+    list-style: none;
+}
+
+.main-nav li {
+    margin-bottom: 30px;
+}
+
+.main-nav a {
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 5px 0;
+}
+
+.main-nav a:hover {
+    color: #0066cc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .profile-image,
+    .main-nav {
+        max-width: 100%;
+    }
+    
+    .main-nav li {
+        margin-bottom: 15px;
+    }
+}
