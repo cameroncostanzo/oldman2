@@ -22,6 +22,8 @@ header {
     align-items: stretch;
     gap: 20px;
     flex: 1;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 /* All three sections are equal width */
